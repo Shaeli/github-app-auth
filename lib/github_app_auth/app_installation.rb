@@ -5,7 +5,7 @@ module GitHub
     # GitHub App Installation Authentication
     module Auth
       def organization_installation_client(org, options = {})
-        client(bearer_token: organization_installation_token(org, options))
+        client(bearer_token: organization_installation_token(org, options), **options)
       end
 
       def organization_installation_token(org, options = {})
